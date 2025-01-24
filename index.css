@@ -1,0 +1,66 @@
+.container {
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: calc(100vw / 3);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+  }
+}
+
+/*Daha küçük mobil cihazlar için(375px ve altı)*/
+@media (max-width:375px) {
+  .container {
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.form_group {
+  margin-bottom: 2rem;
+  display: block;
+}
+.info{
+  color: rgb(63, 63, 63);
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  background-color: rgb(158, 218, 229);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.detay{
+  color: rgb(63, 63, 63);
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  background-color: rgb(137, 232, 143);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.button_group{
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+}
+.sonuclar{
+  color: rgb(63, 63, 63);
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    background-color: rgb(137, 232, 143);
+    padding: 10px;
+    border-radius: 5px;
+}

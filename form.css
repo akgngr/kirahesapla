@@ -1,0 +1,102 @@
+/* Genel Form Stilleri */
+form {
+  display: flex;
+  /* Elementleri yan yana veya alt alta düzenlemek için */
+  flex-direction: column;
+  /* Elementleri alt alta sıralar */
+  gap: 10px;
+  /* Elementler arasında boşluk bırakır */
+  width: 400px;
+  /* Form genişliği */
+  margin: 20px auto;
+  /* Ortalamak için margin */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  color: rgb(63, 63, 63);
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  /* Label'ların alt alta durmasını sağlar */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  /* padding ve border'ın genişliğe dahil edilmesini sağlar */
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  /* Hover ve focus geçişi için */
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  /* Focus olduğunda mavi border */
+  outline: none;
+  /* Varsayılan outline'ı kaldırır */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+  /* Hafif bir gölge */
+}
+
+textarea {
+  resize: vertical;
+  /* Sadece dikey olarak yeniden boyutlandırma */
+  min-height: 100px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+button[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Hata mesajları için stil */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Gerekli alanlar için stil */
+.required-field::after {
+  content: "*";
+  color: red;
+  margin-left: 5px;
+}
+
+small{
+  color: rgb(63, 63, 63);
+  padding-top: .5rem;
+  padding-left: .5rem;
+  display: block;
+}

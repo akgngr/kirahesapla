@@ -67,6 +67,7 @@ const kaltmieteSpan = document.getElementById("kaltmiete")
 const sonuclarDiv = document.getElementById("sonuclar")
 const formGroups = document.querySelectorAll(".form_group")
 const resetButton = document.getElementById("reset")
+const warmitteKira = document.getElementById("warmitteKira")
 
 bilgiAlani.style.display = "none"
 nebenkosten_multiplier.value = 2.4
@@ -182,6 +183,11 @@ hesaplaButton.addEventListener("click", () => {
   toplamHeizungSpan.textContent = toplamHeizung.toFixed(2)
   kaltmieteSpan.textContent = kaltmiete.toFixed(2)
 
+  warmitteKira.textContent =
+    Number(kaltmiete.toFixed(2)) +
+    Number(toplamHeizung.toFixed(2)) +
+    Number(toplamNebenkosten.toFixed(2)) +
+    " EURO"
   sonuclarDiv.style.display = "block"
 })
 
@@ -191,11 +197,11 @@ resetButton.addEventListener("click", () => {
   })
   hesaplaButton.style.display = "block"
   bilgiAlani.style.display = "none"
-  house_qm.value = 0
+  house_qm.value = null
   nebenkosten_multiplier.value = 2.4
   heisung_multiplier.value = 2.4
   yerlerSelect.selectedIndex = 0 // Seçimi sıfırla
-  kisiSayisiInput.value = 1
+  kisiSayisiInput.value = null
   gerekliQmSpan.textContent = ""
   kiraUcretiSpan.textContent = ""
   toplamNebenkostenSpan.textContent = ""
